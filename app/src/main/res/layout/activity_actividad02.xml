@@ -1,9 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".actividad02">
+    android:layout_margin="10sp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:clickable="false"
+        android:text="Suma"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editTextNum1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView"
+        android:ems="5"
+        android:textAlignment="center"
+        android:clickable="false" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView"
+        android:layout_toRightOf="@id/editTextNum1"
+        android:clickable="false"
+        android:text="+"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editTextNum2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView"
+        android:layout_toRightOf="@id/textView1"
+        android:ems="5"
+        android:textAlignment="center"
+        android:clickable="false" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView"
+        android:layout_toRightOf="@id/editTextNum2"
+        android:clickable="false"
+        android:text="="
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editTextResul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView"
+        android:layout_toRightOf="@id/textView2"
+        android:ems="5"
+        android:inputType="text" />
+
+    <Button
+        android:id="@+id/buttonCompror"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextResul"
+        android:layout_alignParentEnd="true"
+
+        android:layout_marginEnd="100dp"
+        android:drawablePadding="5dp"
+        android:gravity="center"
+        android:text="@string/comprobar" />
+
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonCompror"
+
+        android:clickable="false"
+        android:text="Preguntas Correctas = 0, incorrectas= 0"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Actividades Controles Basicos II</string>
+    <string name="condiciones">Aceptas las condiciones </string>
+    <string name="comprobar">Comprobar resultado</string>
+    <string name="resul">El resultado de la operacion es:</string>
 </resources>
