@@ -3,4 +3,20 @@
     <string name="condiciones">Aceptas las condiciones </string>
     <string name="comprobar">Comprobar resultado</string>
     <string name="resul">El resultado de la operacion es:</string>
+    <string name="preguntas">Preguntas Correctas = 0, incorrectas= 0</string>
+    <string name="introduce_datos">Introduce tus datos</string>
+    <string name="Tu_nombre">Tu nombre es:</string>
+    <string name="nombre">Nombre</string>
+    <string name="apellido">Apellido</string>
+    <string name="sexo">Sexo</string>
+    <string name="masc">Masculino</string>
+    <string name="fem">Femenino</string>
+    <string name="Afi">Aficiones:</string>
+    <string name="mus">Musica</string>
+    <string name="lec">Lectura</string>
+    <string name="dep">Deportes</string>
+    <string name="viaj">Viajar</string>
+    <string name="enviar">Enviar</string>
+    <string name="tu_sexo_es">, tu sexo es:</string>
+    <string name="aficiones_son">y tus aficiones son:</string>
 </resources>
