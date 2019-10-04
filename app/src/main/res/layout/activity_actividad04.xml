@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10sp">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:text="@string/cont_tel"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textViewNomb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView"
+        android:clickable="false"
+        android:text="@string/nombre"
+        android:textSize="15dp"/>
+
+    <EditText
+        android:id="@+id/editTextNombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView"
+        android:layout_toRightOf="@+id/textViewNomb"
+        android:clickable="false" />
+
+    <TextView
+        android:id="@+id/textViewApe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextNombre"
+        android:clickable="false"
+        android:text="@string/apellido"
+        android:textSize="15dp"/>
+
+    <EditText
+        android:id="@+id/editTextApellido"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextNombre"
+        android:layout_toRightOf="@+id/textViewNomb"
+        android:clickable="false" />
+
+    <TextView
+        android:id="@+id/textViewSex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextApellido"
+        android:clickable="false"
+        android:text="@string/sexo"
+        android:textSize="15dp"/>
+
+
+    <RadioGroup
+        android:id="@+id/rgOpciones"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewSex"
+        android:layout_toRightOf="@+id/textViewSex"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rbOpcionS1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/masc"/>
+
+        <RadioButton
+            android:id="@+id/rbOpcionS2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fem"/>
+
+    </RadioGroup>
+
+
+
+
+    <TextView
+        android:id="@+id/textViewVelo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rgOpciones"
+        android:layout_marginTop="15dp"
+        android:clickable="false"
+        android:text="@string/vel_int"
+        android:textSize="15dp"/>
+
+
+    <RadioGroup
+        android:id="@+id/rgOpcionesVelo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewVelo"
+        android:layout_toRightOf="@+id/textViewSex"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rbOpcionV1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mb1"/>
+
+        <RadioButton
+            android:id="@+id/rbOpcionV2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mb2"/>
+
+        <RadioButton
+            android:id="@+id/rbOpcionV3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mb3"/>
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textViewMovil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rgOpcionesVelo"
+        android:layout_marginTop="15dp"
+        android:clickable="false"
+        android:text="Datos movil"
+        android:textSize="15dp"/>
+
+
+    <RadioGroup
+        android:id="@+id/rgOpcionesMovil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewMovil"
+        android:layout_toRightOf="@+id/textViewSex"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rbOpcionM1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2gb"/>
+
+        <RadioButton
+            android:id="@+id/rbOpcionM2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5gb"/>
+
+        <RadioButton
+            android:id="@+id/rbOpcionM3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10bg"/>
+
+        <RadioButton
+            android:id="@+id/rbOpcionM4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ilimitados"/>
+
+    </RadioGroup>
+
+
+    <TextView
+        android:id="@+id/textViewAfi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rgOpcionesMovil"
+        android:layout_marginTop="25dp"
+        android:clickable="false"
+        android:text="Servicios extra:"
+        android:textSize="15dp"/>
+
+
+    <CheckBox
+        android:id="@+id/checkBoxC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewAfi"
+        android:layout_toRightOf="@+id/textViewAfi"
+        android:text="Paquete Cine"
+        android:checked="false"/>
+
+    <CheckBox
+        android:id="@+id/checkBoxM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/checkBoxC"
+        android:layout_toRightOf="@+id/textViewAfi"
+        android:text="Paquete Motor"
+        android:checked="false"/>
+
+    <CheckBox
+        android:id="@+id/checkBoxF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/checkBoxM"
+        android:layout_toRightOf="@+id/textViewAfi"
+        android:text="Paquete Futbol"
+        android:checked="false"/>
+
+
+    <CheckBox
+        android:id="@+id/checkBoxAcepCondi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/checkBoxF"
+        android:layout_marginTop="15dp"
+        android:text="Acepto las condiones"
+        android:checked="false"/>
+
+    <Button
+        android:id="@+id/buttonEnv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/checkBoxAcepCondi"
+        android:text="@string/enviar" />
+
+
+
+</RelativeLayout>

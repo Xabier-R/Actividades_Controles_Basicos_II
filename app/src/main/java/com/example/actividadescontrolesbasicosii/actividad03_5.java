@@ -26,6 +26,6 @@ public class actividad03_5 extends AppCompatActivity {
 
 
 
-        textViewDatos.setText(getString(R.string.Tu_nombre)+nombre+" "+apellido+" "+getString(R.string.tu_sexo_es)+" "+sexo+" "+getString(R.string.aficiones_son)+" "+ aficiones);
+        textViewDatos.setText(getString(R.string.Tu_nombre)+" "+nombre+" "+apellido+" "+getString(R.string.tu_sexo_es)+" "+sexo+" "+getString(R.string.aficiones_son)+" "+ aficiones);
     }
 }

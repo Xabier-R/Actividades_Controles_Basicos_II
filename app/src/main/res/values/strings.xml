@@ -19,4 +19,9 @@
     <string name="enviar">Enviar</string>
     <string name="tu_sexo_es">, tu sexo es:</string>
     <string name="aficiones_son">y tus aficiones son:</string>
+    <string name="cont_tel">Contatacion de telefonia</string>
+    <string name="vel_int">Velocidad internet</string>
+    <string name="mb1">50 megas</string>
+    <string name="mb2">300 megas</string>
+    <string name="mb3">600 megas</string>
 </resources>
