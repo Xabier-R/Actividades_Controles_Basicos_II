@@ -15,9 +15,9 @@ public class actividad04 extends AppCompatActivity {
 
     private Button botonEnviar;
     private EditText editTextNombre,editTextApellido;
-    private RadioButton rbOpcionM,rbOpcionF,rbOpcionV1,rbOpcionV2,rbOpcionV3,rbOpcionM1,rbOpcionM2,rbOpcionM3,rbOpcionM4;
-    private CheckBox checkBoxC,checkBoxM,checkBoxF,checkBoxAcepCondi;
-
+    private CheckBox[] checkServicios;
+    private CheckBox checkBoxAcepCondi;
+    private RadioGroup rgOpciones,rgVel,rgOpcionesMovil;
 
 
     @Override
@@ -26,23 +26,21 @@ public class actividad04 extends AppCompatActivity {
         setContentView(R.layout.activity_actividad04);
 
 
-
         botonEnviar = findViewById(R.id.buttonEnv);
         editTextNombre = findViewById(R.id.editTextNombre);
         editTextApellido = findViewById(R.id.editTextApellido);
-        rbOpcionM = findViewById(R.id.rbOpcionS1);
-        rbOpcionF = findViewById(R.id.rbOpcionS2);
-        rbOpcionV1 = findViewById(R.id.rbOpcionV1);
-        rbOpcionV2 = findViewById(R.id.rbOpcionV2);
-        rbOpcionV3 = findViewById(R.id.rbOpcionV3);
-        rbOpcionM1 = findViewById(R.id.rbOpcionM1);
-        rbOpcionM2 = findViewById(R.id.rbOpcionM2);
-        rbOpcionM3 = findViewById(R.id.rbOpcionM3);
-        rbOpcionM4 = findViewById(R.id.rbOpcionM4);
-        checkBoxC = findViewById(R.id.checkBoxC);
-        rbOpcionM1 = findViewById(R.id.rbOpcionM1);
-        checkBoxM = findViewById(R.id.checkBoxM);
-        checkBoxF = findViewById(R.id.checkBoxF);
+
+        rgOpciones = findViewById(R.id.rgOpciones);
+        rgVel = findViewById(R.id.rgOpcionesVelo);
+        rgOpcionesMovil = findViewById(R.id.rgOpcionesMovil);
+
+
+        checkServicios = new CheckBox[3];
+        checkServicios[0] = findViewById(R.id.checkBoxC);
+        checkServicios[1] = findViewById(R.id.checkBoxM);
+        checkServicios[2] = findViewById(R.id.checkBoxF);
+
+
         checkBoxAcepCondi = findViewById(R.id.checkBoxAcepCondi);
 
 
@@ -54,13 +52,27 @@ public class actividad04 extends AppCompatActivity {
                 if (checkBoxAcepCondi.isChecked()) {
 
 
+                    Intent intent = new Intent(actividad04.this, actividad04_2.class);
+                    intent.putExtra("nombre", editTextNombre.getText().toString());
+                    intent.putExtra("apellido", editTextApellido.getText().toString());
+
+                    RadioButton sexo = findViewById(rgOpciones.getCheckedRadioButtonId());
+                    intent.putExtra("sexo", sexo.getText().toString());
+
+                    RadioButton velocidad = findViewById(rgVel.getCheckedRadioButtonId());
+                    intent.putExtra("velocidad", velocidad.getText().toString());
+
+                    RadioButton movil = findViewById(rgOpcionesMovil.getCheckedRadioButtonId());
+                    intent.putExtra("movil", movil.getText().toString());
 
 
+                    intent.putExtra("servicios", checkBoxSeleccionados());
 
 
-                }
-                else
-                {
+                    startActivity(intent);
+
+
+                } else {
                     Intent intent = new Intent(actividad04.this, actividad04_1.class);
 
                     startActivity(intent);
@@ -70,6 +82,23 @@ public class actividad04 extends AppCompatActivity {
             }
         });
 
+    }
+
+        private String checkBoxSeleccionados(){
+            String strCheck =" ";
+            for(int i=0;i<checkServicios.length;i++)
+            {
+                if(checkServicios[i].isChecked())
+                {
+
+                    strCheck += (checkServicios[i].getText() + ", ");
+
+                }
+            }
+
+            return strCheck;
+        }
+
 
     }
-}
+

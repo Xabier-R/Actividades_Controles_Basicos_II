@@ -159,7 +159,7 @@
             android:id="@+id/rbOpcionM3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="10bg"/>
+            android:text="10gb"/>
 
         <RadioButton
             android:id="@+id/rbOpcionM4"

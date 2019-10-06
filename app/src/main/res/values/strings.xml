@@ -24,4 +24,7 @@
     <string name="mb1">50 megas</string>
     <string name="mb2">300 megas</string>
     <string name="mb3">600 megas</string>
+    <string name="vel_ele">la velocidad elegida es de:</string>
+    <string name="gb_movil">el numero de gb en el movil es de</string>
+    <string name="ser_extra">y los servicios extra contratados son:</string>
 </resources>
